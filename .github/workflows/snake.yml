@@ -13,17 +13,76 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
 
     steps:
-      - name: Generate yearly contribution game
-        uses: abozanona/pacman-contribution-graph@7332e1de7903ab780c3692a4127a59cc13872daa
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.PROFILE_CONTRIBUTIONS_TOKEN }}
-          games: "pacman"
-          player_style: "opportunistic"
-          hide_month_labels: "false"
+      - name: Generate exact anonymized contribution game
+        env:
+          PROFILE_CONTRIBUTIONS_TOKEN: ${{ secrets.PROFILE_CONTRIBUTIONS_TOKEN }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+
+          const token = process.env.PROFILE_CONTRIBUTIONS_TOKEN;
+          const login = process.env.PROFILE_LOGIN;
+          if (!token) throw new Error('PROFILE_CONTRIBUTIONS_TOKEN is missing');
+
+          const query = `query($login:String!){user(login:$login){contributionsCollection{contributionCalendar{totalContributions weeks{firstDay contributionDays{date contributionCount contributionLevel weekday}}}}}}`;
+          const res = await fetch('https://api.github.com/graphql', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query, variables: { login } })
+          });
+          if (!res.ok) throw new Error(`GraphQL failed: ${res.status}`);
+          const json = await res.json();
+          if (json.errors?.length) throw new Error(json.errors.map(e => e.message).join('; '));
+
+          const cal = json.data?.user?.contributionsCollection?.contributionCalendar;
+          if (!cal?.weeks?.length) throw new Error('No contribution calendar returned');
+
+          const W=1166,H=235,cell=13,gap=4,step=17,gx=92,gy=67;
+          const months=[]; let prev=-1;
+          cal.weeks.forEach((w,i)=>{const d=new Date(w.firstDay+'T00:00:00Z'); const m=d.getUTCMonth(); if(m!==prev){months.push([gx+i*step,d.toLocaleString('en-US',{month:'short',timeZone:'UTC'})]); prev=m;}});
+          const path=[];
+          for(let r=0;r<7;r++){
+            const cols=[...cal.weeks.keys()]; if(r%2) cols.reverse();
+            for(const c of cols) path.push([gx+c*step+cell/2,gy+r*step+cell/2]);
+          }
+          const motion=path.map((p,i)=>`${i?'L':'M'} ${p[0]} ${p[1]}`).join(' ');
+
+          const themes={
+            dark:{bg:'#0d1117',text:'#c9d1d9',muted:'#8b949e',border:'#21262d',levels:{NONE:'#161b22',FIRST_QUARTILE:'#0e4429',SECOND_QUARTILE:'#006d32',THIRD_QUARTILE:'#26a641',FOURTH_QUARTILE:'#39d353'}},
+            light:{bg:'#ffffff',text:'#24292f',muted:'#57606a',border:'#d0d7de',levels:{NONE:'#ebedf0',FIRST_QUARTILE:'#9be9a8',SECOND_QUARTILE:'#40c463',THIRD_QUARTILE:'#30a14e',FOURTH_QUARTILE:'#216e39'}}
+          };
+
+          function ghost(color,begin){return `<g><path d="M-8 7V-2A8 8 0 0116 0V7L4 4 0 7-4 4Z" transform="translate(-8 0)" fill="${color}"/><circle cx="-3" cy="-2" r="2" fill="#fff"/><circle cx="3" cy="-2" r="2" fill="#fff"/><animateMotion dur="42s" begin="${begin}s" repeatCount="indefinite" rotate="auto" path="${motion}"/></g>`;}
+
+          function render(name){
+            const t=themes[name]; const cells=[];
+            cal.weeks.forEach((w,c)=>w.contributionDays.forEach(d=>{
+              const x=gx+c*step,y=gy+d.weekday*step,fill=t.levels[d.contributionLevel]||t.levels.NONE;
+              cells.push(`<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="3" fill="${fill}" stroke="${t.border}" stroke-width=".7"><title>${d.date}: ${d.contributionCount} contributions</title></rect>`);
+            }));
+            const labels=months.map(([x,m])=>`<text x="${x}" y="50" font-size="12" fill="${t.muted}">${m}</text>`).join('');
+            return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+            <rect width="100%" height="100%" rx="12" fill="${t.bg}"/>
+            <text x="32" y="28" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="15" font-weight="600" fill="${t.text}">${cal.totalContributions.toLocaleString('en-US')} contributions in the last year</text>
+            <text x="1134" y="28" text-anchor="end" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11" fill="${t.muted}">private activity anonymized</text>
+            ${labels}
+            <text x="54" y="87" font-size="11" fill="${t.muted}">Mon</text><text x="54" y="121" font-size="11" fill="${t.muted}">Wed</text><text x="54" y="155" font-size="11" fill="${t.muted}">Fri</text>
+            ${cells.join('')}
+            <g><circle r="8" fill="#ffd60a"/><path d="M0 0L9-5V5Z" fill="${t.bg}"><animateTransform attributeName="transform" type="scale" values="1 1;1 .18;1 1" dur=".34s" repeatCount="indefinite"/></path><animateMotion dur="42s" repeatCount="indefinite" rotate="auto" path="${motion}"/></g>
+            ${ghost('#ff375f','-5')}${ghost('#ff9f0a','-9')}${ghost('#64d2ff','-13')}${ghost('#bf5af2','-17')}
+            <text x="583" y="214" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="${t.text}">Build → break → understand → make it boringly reliable.</text>
+            </svg>`;
+          }
+
+          fs.mkdirSync('dist',{recursive:true});
+          fs.writeFileSync('dist/pacman-contribution-graph-dark.svg',render('dark'));
+          fs.writeFileSync('dist/pacman-contribution-graph.svg',render('light'));
+          console.log(`Rendered ${cal.totalContributions} contributions across ${cal.weeks.length} weeks.`);
+          NODE
 
       - name: Publish game assets
         uses: crazy-max/ghaction-github-pages@v3.1.0
