@@ -2,34 +2,31 @@
 
 # Mohammed Al Assad
 
-### Software Engineer · Backend · Distributed Systems · AI
+### Backend systems. Full-stack products. Applied AI.
 
-I build systems where **reliability, execution, and data flow** matter — from APIs and durable background jobs to local-first ML infrastructure.
+**Software Engineer in Montreal building reliable products from API to UI.**
 
-`Java` · `Spring Boot` · `Python` · `TypeScript` · `PostgreSQL` · `React` · `Docker`
+[LinkedIn](https://www.linkedin.com/in/mohammed-alassad/) · Montreal, Canada
 
 </div>
 
 ---
 
-### What I like building
-
 ```text
-request → API → durable state → async execution → recovery → observable result
+mohammed@montreal:~$ what-do-you-build?
+
+client ──► API ──► durable state ──► async work ──► observable result
+                       │                  │
+                       └──── recovery ◄───┘
 ```
 
-I’m especially interested in the parts of software that become important once the happy path stops being enough:
+I like the parts of software that get interesting when requests time out, workers restart, jobs retry, or events arrive out of order.
 
-- durable jobs, retries, leases, heartbeats, and idempotency
-- backend APIs and service boundaries
-- concurrency and failure recovery
-- data-intensive applications and ML infrastructure
-- local-first software and reproducible execution
-- developer tooling that makes complex systems easier to operate
+`Java` · `Spring Boot` · `Python` · `TypeScript` · `PostgreSQL` · `React` · `Docker`
 
 ---
 
-## Selected engineering work
+## Things I’m building
 
 <table>
 <tr>
@@ -38,14 +35,9 @@ I’m especially interested in the parts of software that become important once 
 ### Asyncra
 **Durable background job orchestration**
 
-A Postgres-backed execution system built around reliable asynchronous work rather than in-process background tasks.
+> Queues are easy. Recovery is the interesting part.
 
-**Highlights**
-- retries and stale-lease recovery
-- worker heartbeats and placement
-- idempotency / side-effect fencing
-- SSE logs and operator visibility
-- TypeScript SDK for producers and workers
+Postgres-backed asynchronous execution with retries, leases, worker heartbeats, stale recovery, side-effect fencing, SSE logs, and a TypeScript SDK.
 
 `Spring Boot` `PostgreSQL` `TypeScript` `React`
 
@@ -55,14 +47,9 @@ A Postgres-backed execution system built around reliable asynchronous work rathe
 ### AtlasML
 **Local-first AutoML platform**
 
-A desktop ML system that separates product state, orchestration, and bounded model execution across clear runtime boundaries.
+> ML execution without making Python own the whole product.
 
-**Highlights**
-- Electron + React desktop app
-- Spring Boot control plane
-- PostgreSQL authoritative state
-- Python / XGBoost execution worker
-- model evaluation, prediction, lineage, monitoring
+Electron + React on the desktop, a Spring Boot control plane, PostgreSQL as authoritative state, and bounded Python/XGBoost execution.
 
 `Java` `Python` `React` `Electron` `PostgreSQL`
 
@@ -74,31 +61,27 @@ A desktop ML system that separates product state, orchestration, and bounded mod
 ### ConUMaps
 **Mobile campus navigation & planning**
 
-A React Native campus companion combining outdoor/indoor routing, planning, calendar-aware context, and a Flask backend.
+> Getting to class should not require its own graph-search problem.
 
-**Highlights**
-- indoor and outdoor navigation
-- multi-stop route planning
-- Google Calendar integration
-- mobile-first product flows
-- frontend/backend test coverage
+A React Native campus companion with indoor/outdoor routing, multi-stop planning, calendar-aware context, and a Flask backend.
 
 `React Native` `Expo` `TypeScript` `Python` `Flask`
 
 </td>
 <td width="50%" valign="top">
 
-### How I approach engineering
+### The recurring question
 
-I prefer systems that are understandable under failure, not just impressive in a demo.
+**“What happens if this component stops right here?”**
 
-**I care about:**
-- explicit ownership of state
-- deterministic contracts
+That question usually leads to the engineering I enjoy most:
+
+- explicit state ownership
+- idempotency and recovery
+- concurrency boundaries
+- observable execution
+- realistic failure paths
 - measured performance
-- realistic recovery paths
-- testing the boundaries between components
-- documenting tradeoffs, not just implementation
 
 </td>
 </tr>
@@ -106,24 +89,33 @@ I prefer systems that are understandable under failure, not just impressive in a
 
 ---
 
-## Technical focus
+## My engineering defaults
 
-| Area | Tools & technologies |
+| | Default |
 |---|---|
-| **Backend** | Java, Spring Boot, Python, Node.js, REST APIs |
-| **Data** | PostgreSQL, Redis, MongoDB, SQLite, Flyway |
-| **Frontend** | React, React Native, TypeScript, Electron |
-| **Infrastructure** | Docker, GitHub Actions, Azure |
-| **ML / Data** | XGBoost, scikit-learn, tabular ML workflows |
+| **State** | Make ownership obvious |
+| **Failures** | Make recovery boring |
+| **APIs** | Prefer explicit contracts |
+| **Performance** | Measure before optimizing |
+| **Architecture** | Add complexity only when it earns its keep |
+| **AI** | Use it where it improves the product, not where it obscures the system |
+
+<details>
+<summary><b>What I mean by “make recovery boring”</b></summary>
+<br>
+
+A repeated request should not duplicate a side effect. A restarted worker should not permanently own a job. A restarted API should not forget long-running work. A model run should be reproducible enough to explain later.
+
+Those are the kinds of edge cases I like turning into normal system behavior.
+
+</details>
 
 ---
 
-### A little more about me
-
-I’m drawn to projects that cross boundaries: backend + infrastructure, product + reliability, or ML + software architecture. I like taking a system from **“it works”** to **“it behaves predictably when things go wrong.”**
-
 <div align="center">
 
-**Montreal, Canada** · [LinkedIn](https://www.linkedin.com/in/mohammed-alassad/)
+### Java · Spring Boot · Python · TypeScript · PostgreSQL · React · Docker
+
+**Backend/platform engineering · distributed systems · full-stack products · ML infrastructure**
 
 </div>
