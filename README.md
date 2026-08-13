@@ -116,14 +116,8 @@ Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask 
 
 <br/>
 
-## 🌱 GitHub lately
-
 <p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Pluhs&bg_color=0d1117&color=7dd3fc&line=c084fc&point=f472b6&area=true&hide_border=true" />
-</p>
-
-<p align="center">
-  <b>Building things, breaking things, figuring out why, then making them boringly reliable.</b>
+  <b>Build → break → understand → make it boringly reliable.</b>
 </p>
 
 <p align="center">
