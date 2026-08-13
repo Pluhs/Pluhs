@@ -116,17 +116,17 @@ Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask 
 
 <br/>
 
-## 🐍 My year in commits
+## 🎮 My year in commits
 
 <p align="center">
-  <sub>My contribution grid turned into a tiny game — the snake clears the board and regenerates every day.</sub>
+  <sub>Pac-Man runs through my yearly contribution grid while the ghosts try to catch up.</sub>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/github-snake.svg" />
-    <img width="95%" alt="Mohammed's yearly GitHub contribution snake" src="https://raw.githubusercontent.com/Pluhs/Pluhs/output/github-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg" />
+    <img width="95%" alt="Mohammed's yearly GitHub contribution Pac-Man game" src="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg" />
   </picture>
 </p>
 
