@@ -116,14 +116,22 @@ Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask 
 
 <br/>
 
-## 🌱 GitHub lately
+## 🐍 My year in commits
 
 <p align="center">
-  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Pluhs&bg_color=0d1117&color=7dd3fc&line=c084fc&point=f472b6&area=true&hide_border=true" />
+  <sub>My contribution grid turned into a tiny game — the snake clears the board and regenerates every day.</sub>
 </p>
 
 <p align="center">
-  <b>Building things, breaking things, figuring out why, then making them boringly reliable.</b>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/github-snake.svg" />
+    <img width="95%" alt="Mohammed's yearly GitHub contribution snake" src="https://raw.githubusercontent.com/Pluhs/Pluhs/output/github-snake.svg" />
+  </picture>
+</p>
+
+<p align="center">
+  <b>Build → break → understand → make it boringly reliable.</b>
 </p>
 
 <p align="center">
