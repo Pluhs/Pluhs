@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate contribution arcade game
 
 on:
   schedule:
@@ -13,18 +13,18 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 20
 
     steps:
-      - name: Generate yearly contribution snake
-        uses: Platane/snk/svg-only@v3
+      - name: Generate yearly contribution game
+        uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg?color_snake=%23ff4ecd&color_dots=%23ebedf0,%23c4b5fd,%237dd3fc,%23c084fc,%23f472b6
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=%23ff4ecd&color_dots=%23161b22,%233b2a63,%230e7490,%237e22ce,%23db2777
+          games: "pacman"
+          player_style: "opportunistic"
+          hide_month_labels: "false"
 
-      - name: Publish snake assets
+      - name: Publish game assets
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
