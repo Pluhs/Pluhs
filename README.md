@@ -1,121 +1,131 @@
-<div align="center">
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7F00FF,45:00C6FF,100:FF4ECD&height=210&section=header&text=Mohammed%20Al%20Assad&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%E2%80%A2%20Montreal&descAlignY=57&descSize=19" />
+</p>
 
-# Mohammed Al Assad
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2600&pause=850&color=40C9FF&center=true&vCenter=true&width=720&lines=Backend+systems+%E2%9A%99%EF%B8%8F;Full-stack+products+%F0%9F%8C%88;Distributed+systems+%F0%9F%94%81;Applied+AI+%E2%9C%A8;I+like+making+failure+boring." alt="Typing SVG" />
+</p>
 
-### Backend systems. Full-stack products. Applied AI.
+<p align="center">
+  <a href="https://www.linkedin.com/in/mohammed-alassad/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <img src="https://img.shields.io/badge/Montreal-Canada-FF4D8D?style=for-the-badge&logo=googlemaps&logoColor=white" />
+  <img src="https://img.shields.io/badge/Open%20to-Software%20Engineering-7F00FF?style=for-the-badge" />
+</p>
 
-**Software Engineer in Montreal building reliable products from API to UI.**
+<br/>
 
-[LinkedIn](https://www.linkedin.com/in/mohammed-alassad/) · Montreal, Canada
+## Hey, I’m Mohammed 👋
 
-</div>
+I build software from **API → database → workers → UI**, and I especially enjoy the parts that get interesting when something restarts, retries, races, or arrives out of order.
 
----
+> **My favorite engineering question:** _“Okay... but what happens if this crashes right here?”_
 
-```text
-mohammed@montreal:~$ what-do-you-build?
+<br/>
 
-client ──► API ──► durable state ──► async work ──► observable result
-                       │                  │
-                       └──── recovery ◄───┘
-```
+## 🧰 My playground
 
-I like the parts of software that get interesting when requests time out, workers restart, jobs retry, or events arrive out of order.
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,python,ts,nodejs,react,postgres,redis,mongodb,docker,git,github&perline=12" />
+</p>
 
-`Java` · `Spring Boot` · `Python` · `TypeScript` · `PostgreSQL` · `React` · `Docker`
+<p align="center">
+  <img src="https://img.shields.io/badge/Backend-where%20I%20feel%20at%20home-7F00FF?style=flat-square" />
+  <img src="https://img.shields.io/badge/Distributed%20Systems-the%20fun%20kind%20of%20pain-00B8D9?style=flat-square" />
+  <img src="https://img.shields.io/badge/Full--Stack-I%20like%20seeing%20the%20whole%20thing-FF4D8D?style=flat-square" />
+  <img src="https://img.shields.io/badge/AI-useful%20when%20it%20earns%20its%20place-F59E0B?style=flat-square" />
+</p>
 
----
+<br/>
 
-## Things I’m building
+## 🚀 Three projects, three different vibes
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### Asyncra
-**Durable background job orchestration**
+### 🟣 Asyncra
+**Durable job orchestration**
+
+<img src="https://img.shields.io/badge/VIBE-distributed%20systems-7F00FF?style=for-the-badge" />
+
+Retries, leases, worker heartbeats, stale recovery, idempotency, SSE logs, placement and a TypeScript SDK.
+
+**Built with**  
+`Spring Boot` `PostgreSQL` `TypeScript` `React`
 
 > Queues are easy. Recovery is the interesting part.
 
-Postgres-backed asynchronous execution with retries, leases, worker heartbeats, stale recovery, side-effect fencing, SSE logs, and a TypeScript SDK.
-
-`Spring Boot` `PostgreSQL` `TypeScript` `React`
-
 </td>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### AtlasML
-**Local-first AutoML platform**
+### 🔵 AtlasML
+**Local-first AutoML desktop platform**
 
-> ML execution without making Python own the whole product.
+<img src="https://img.shields.io/badge/VIBE-ML%20infrastructure-00B8D9?style=for-the-badge" />
 
-Electron + React on the desktop, a Spring Boot control plane, PostgreSQL as authoritative state, and bounded Python/XGBoost execution.
+React + Electron on the desktop, Spring Boot for control, PostgreSQL for state, and Python/XGBoost for bounded ML execution.
 
+**Built with**  
 `Java` `Python` `React` `Electron` `PostgreSQL`
 
+> ML without making Python own the whole product.
+
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
+<td width="33%" valign="top">
 
-### ConUMaps
-**Mobile campus navigation & planning**
+### 🟢 ConUMaps
+**Mobile campus navigation**
 
-> Getting to class should not require its own graph-search problem.
+<img src="https://img.shields.io/badge/VIBE-mobile%20%2B%20maps-16A34A?style=for-the-badge" />
 
-A React Native campus companion with indoor/outdoor routing, multi-stop planning, calendar-aware context, and a Flask backend.
+Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask backend in a React Native app.
 
+**Built with**  
 `React Native` `Expo` `TypeScript` `Python` `Flask`
 
-</td>
-<td width="50%" valign="top">
-
-### The recurring question
-
-**“What happens if this component stops right here?”**
-
-That question usually leads to the engineering I enjoy most:
-
-- explicit state ownership
-- idempotency and recovery
-- concurrency boundaries
-- observable execution
-- realistic failure paths
-- measured performance
+> Getting to class became a graph problem somehow.
 
 </td>
 </tr>
 </table>
 
----
+<br/>
 
-## My engineering defaults
+## ⚡ How my brain tends to work
 
-| | Default |
-|---|---|
-| **State** | Make ownership obvious |
-| **Failures** | Make recovery boring |
-| **APIs** | Prefer explicit contracts |
-| **Performance** | Measure before optimizing |
-| **Architecture** | Add complexity only when it earns its keep |
-| **AI** | Use it where it improves the product, not where it obscures the system |
+<table>
+<tr>
+<td>🧠 <b>State</b></td>
+<td>Who owns it?</td>
+<td>🔁 <b>Retries</b></td>
+<td>Can I safely do this twice?</td>
+</tr>
+<tr>
+<td>💥 <b>Failure</b></td>
+<td>What survives a restart?</td>
+<td>📏 <b>Performance</b></td>
+<td>Did we measure it?</td>
+</tr>
+<tr>
+<td>🧩 <b>Architecture</b></td>
+<td>Does this complexity earn its keep?</td>
+<td>✨ <b>AI</b></td>
+<td>Does it actually improve the product?</td>
+</tr>
+</table>
 
-<details>
-<summary><b>What I mean by “make recovery boring”</b></summary>
-<br>
+<br/>
 
-A repeated request should not duplicate a side effect. A restarted worker should not permanently own a job. A restarted API should not forget long-running work. A model run should be reproducible enough to explain later.
+## 🌱 GitHub lately
 
-Those are the kinds of edge cases I like turning into normal system behavior.
+<p align="center">
+  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Pluhs&bg_color=0d1117&color=7dd3fc&line=c084fc&point=f472b6&area=true&hide_border=true" />
+</p>
 
-</details>
+<p align="center">
+  <b>Building things, breaking things, figuring out why, then making them boringly reliable.</b>
+</p>
 
----
-
-<div align="center">
-
-### Java · Spring Boot · Python · TypeScript · PostgreSQL · React · Docker
-
-**Backend/platform engineering · distributed systems · full-stack products · ML infrastructure**
-
-</div>
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF4ECD,50:00C6FF,100:7F00FF&height=110&section=footer" />
+</p>
