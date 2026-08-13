@@ -116,22 +116,14 @@ Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask 
 
 <br/>
 
-## 🎮 My year in commits
+## 🌱 GitHub lately
 
 <p align="center">
-  <sub>Pac-Man moves across the same anonymized yearly contribution counts shown on my GitHub profile.</sub>
+  <img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=Pluhs&bg_color=0d1117&color=7dd3fc&line=c084fc&point=f472b6&area=true&hide_border=true" />
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph-dark.svg?v=2" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg?v=2" />
-    <img width="95%" alt="Mohammed's anonymized yearly GitHub contribution game" src="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg?v=2" />
-  </picture>
-</p>
-
-<p align="center">
-  <b>Build → break → understand → make it boringly reliable.</b>
+  <b>Building things, breaking things, figuring out why, then making them boringly reliable.</b>
 </p>
 
 <p align="center">
