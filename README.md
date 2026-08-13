@@ -119,14 +119,14 @@ Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask 
 ## 🎮 My year in commits
 
 <p align="center">
-  <sub>Pac-Man runs through my yearly contribution grid while the ghosts try to catch up.</sub>
+  <sub>Pac-Man moves across the same anonymized yearly contribution counts shown on my GitHub profile.</sub>
 </p>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg" />
-    <img width="95%" alt="Mohammed's yearly GitHub contribution Pac-Man game" src="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph-dark.svg?v=2" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg?v=2" />
+    <img width="95%" alt="Mohammed's anonymized yearly GitHub contribution game" src="https://raw.githubusercontent.com/Pluhs/Pluhs/output/pacman-contribution-graph.svg?v=2" />
   </picture>
 </p>
 
