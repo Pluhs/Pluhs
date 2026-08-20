@@ -1,125 +1,115 @@
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7F00FF,45:00C6FF,100:FF4ECD&height=210&section=header&text=Mohammed%20Al%20Assad&fontSize=44&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Software%20Engineer%20%E2%80%A2%20Montreal&descAlignY=57&descSize=19" />
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:14251F,55:26463B,100:14251F&height=190&section=header&text=Mohammed%20Al%20Assad&fontSize=42&fontColor=F1F0E8&fontAlignY=38&desc=Backend%20%2B%20Full-Stack%20Software%20Engineer%20%C2%B7%20Montr%C3%A9al&descAlignY=59&descSize=18" />
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2600&pause=850&color=40C9FF&center=true&vCenter=true&width=720&lines=Backend+systems+%E2%9A%99%EF%B8%8F;Full-stack+products+%F0%9F%8C%88;Distributed+systems+%F0%9F%94%81;Applied+AI+%E2%9C%A8;I+like+making+failure+boring." alt="Typing SVG" />
+  <strong>I like building the parts that make software reliable.</strong>
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/mohammed-alassad/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <img src="https://img.shields.io/badge/Montreal-Canada-FF4D8D?style=for-the-badge&logo=googlemaps&logoColor=white" />
-  <img src="https://img.shields.io/badge/Open%20to-Software%20Engineering-7F00FF?style=for-the-badge" />
-</p>
-
-<br/>
-
-## Hey, I’m Mohammed 👋
-
-I build software from **API → database → workers → UI**, and I especially enjoy the parts that get interesting when something restarts, retries, races, or arrives out of order.
-
-> **My favorite engineering question:** _“Okay... but what happens if this crashes right here?”_
-
-<br/>
-
-## 🧰 My playground
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,python,ts,nodejs,react,postgres,redis,mongodb,docker,git,github&perline=12" />
+  Backend systems · Distributed workflows · Full-stack products · Applied AI
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Backend-where%20I%20feel%20at%20home-7F00FF?style=flat-square" />
-  <img src="https://img.shields.io/badge/Distributed%20Systems-the%20fun%20kind%20of%20pain-00B8D9?style=flat-square" />
-  <img src="https://img.shields.io/badge/Full--Stack-I%20like%20seeing%20the%20whole%20thing-FF4D8D?style=flat-square" />
-  <img src="https://img.shields.io/badge/AI-useful%20when%20it%20earns%20its%20place-F59E0B?style=flat-square" />
+  <a href="https://pluhs.github.io/Portfolio/"><img src="https://img.shields.io/badge/Portfolio-View%20my%20work-C6FF4A?style=for-the-badge&labelColor=14251F&color=C6FF4A" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/mohammed-alassad/"><img src="https://img.shields.io/badge/LinkedIn-Connect-7BA7FF?style=for-the-badge&labelColor=14251F&color=7BA7FF" alt="LinkedIn" /></a>
+  <img src="https://img.shields.io/badge/Open%20to-Full--time%20Software%20Engineering-FF5A24?style=for-the-badge&labelColor=14251F&color=FF5A24" alt="Open to full-time software engineering roles" />
 </p>
 
-<br/>
+---
 
-## 🚀 Three projects, three different vibes
+## About
+
+I’m a Software Engineering graduate from Concordia University in Montréal. I’m most at home in backend systems, but I work across the product when that is what it takes to ship something good.
+
+I enjoy problems involving **state, concurrency, failure recovery, APIs, data pipelines, distributed workflows, and ML infrastructure**. I care less about adding complexity and more about making sure the complexity that exists earns its place.
+
+My default questions tend to be:
+
+- Who owns this state?
+- What happens if this process dies here?
+- Can this operation safely run twice?
+- What happens under load?
+- Did we measure the improvement?
+
+---
+
+## Selected work
 
 <table>
 <tr>
-<td width="33%" valign="top">
-
-### 🟣 Asyncra
-**Durable job orchestration**
-
-<img src="https://img.shields.io/badge/VIBE-distributed%20systems-7F00FF?style=for-the-badge" />
-
-Retries, leases, worker heartbeats, stale recovery, idempotency, SSE logs, placement and a TypeScript SDK.
-
-**Built with**  
-`Spring Boot` `PostgreSQL` `TypeScript` `React`
-
-> Queues are easy. Recovery is the interesting part.
-
-</td>
-<td width="33%" valign="top">
-
-### 🔵 AtlasML
-**Local-first AutoML desktop platform**
-
-<img src="https://img.shields.io/badge/VIBE-ML%20infrastructure-00B8D9?style=for-the-badge" />
-
-React + Electron on the desktop, Spring Boot for control, PostgreSQL for state, and Python/XGBoost for bounded ML execution.
-
-**Built with**  
-`Java` `Python` `React` `Electron` `PostgreSQL`
-
-> ML without making Python own the whole product.
-
-</td>
-<td width="33%" valign="top">
-
-### 🟢 ConUMaps
-**Mobile campus navigation**
-
-<img src="https://img.shields.io/badge/VIBE-mobile%20%2B%20maps-16A34A?style=for-the-badge" />
-
-Indoor/outdoor routing, multi-stop planning, calendar-aware context and a Flask backend in a React Native app.
-
-**Built with**  
-`React Native` `Expo` `TypeScript` `Python` `Flask`
-
-> Getting to class became a graph problem somehow.
-
-</td>
+<td width="24%"><strong>AtlasML</strong></td>
+<td>Local-first AutoML desktop platform with a Spring Boot control plane, PostgreSQL-backed state, bounded Python workers, reproducible execution, large-dataset workflows, HPO, and model evaluation infrastructure.</td>
+</tr>
+<tr>
+<td><strong>Asyncra</strong></td>
+<td>Durable job orchestration system with retries, leases, worker heartbeats, stale-job recovery, cancellation, idempotency, SSE logs, and a TypeScript worker SDK.</td>
+</tr>
+<tr>
+<td><strong>AeroML</strong></td>
+<td>No-code AutoML platform built as a capstone for Pratt & Whitney Canada, combining an Electron/React desktop experience with Python ML workflows, data tooling, and LLM-assisted product features.</td>
+</tr>
+<tr>
+<td><strong>ConUMaps</strong></td>
+<td>Campus navigation product with indoor/outdoor routing, multi-stop planning, calendar-aware context, and a React Native mobile experience backed by Python services.</td>
 </tr>
 </table>
 
-<br/>
+<p align="center">
+  <a href="https://pluhs.github.io/Portfolio/"><strong>Explore the projects in more detail →</strong></a>
+</p>
 
-## ⚡ How my brain tends to work
+---
+
+## Engineering focus
+
+**Backend & APIs**  
+Java · Spring Boot · Python · FastAPI · Node.js · REST APIs
+
+**Data & distributed systems**  
+PostgreSQL · Redis · MongoDB · SQLite · concurrency · queues · retries · leases · idempotency
+
+**Applied AI / ML infrastructure**  
+scikit-learn · XGBoost · LightGBM · CatBoost · Optuna · PyArrow · reproducible ML workflows
+
+**Product engineering**  
+TypeScript · React · React Native · Electron · Expo
+
+**Infrastructure & delivery**  
+Docker · GitHub Actions · Linux · Azure · CI/CD
+
+---
+
+## Core stack
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=java,spring,python,ts,nodejs,react,postgres,redis,mongodb,docker,git,github&perline=12" alt="Core technology stack" />
+</p>
+
+---
+
+## What I care about
 
 <table>
 <tr>
-<td>🧠 <b>State</b></td>
-<td>Who owns it?</td>
-<td>🔁 <b>Retries</b></td>
-<td>Can I safely do this twice?</td>
-</tr>
-<tr>
-<td>💥 <b>Failure</b></td>
-<td>What survives a restart?</td>
-<td>📏 <b>Performance</b></td>
-<td>Did we measure it?</td>
-</tr>
-<tr>
-<td>🧩 <b>Architecture</b></td>
-<td>Does this complexity earn its keep?</td>
-<td>✨ <b>AI</b></td>
-<td>Does it actually improve the product?</td>
+<td width="33%" valign="top"><strong>Reliability</strong><br/><sub>Retries, recovery, idempotency, durable state, and predictable failure modes.</sub></td>
+<td width="33%" valign="top"><strong>Performance</strong><br/><sub>Measure first, find the bottleneck, and optimize the part that actually matters.</sub></td>
+<td width="33%" valign="top"><strong>Architecture</strong><br/><sub>Clear ownership, explicit boundaries, and complexity that earns its keep.</sub></td>
 </tr>
 </table>
 
-<br/>
+---
 
 <p align="center">
-  <b>Build → break → understand → make it boringly reliable.</b>
+  <strong>Currently open to full-time software engineering opportunities.</strong>
 </p>
 
 <p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF4ECD,50:00C6FF,100:7F00FF&height=110&section=footer" />
+  <a href="https://pluhs.github.io/Portfolio/">Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/mohammed-alassad/">LinkedIn</a>
+</p>
+
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:14251F,55:26463B,100:14251F&height=90&section=footer" />
 </p>
